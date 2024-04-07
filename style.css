@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 30px;
+  }
+  
+  form {
+    margin: 0 auto; /*0 0 0 0 상 우 하 좌 0 0 상하 좌우, auto는 자동으로 가운데로 맞춰줌*/
+    width: 500px;
+    display: flex;
+    column-gap: 10px;
+  }
+  
+  input,
+  button {
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+  }
+  
+  input {
+    width: 500px;
+    padding: 0 15px;
+    outline: none;
+  }
+  
+  button {
+    width: 100px;
+    height: 35px;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  ul {
+    list-style: none;
+    margin: 30px auto;
+    width: 500px;
+  }
+
+  li {
+    position: relative; /* 부모로부터 상대적 위치 설정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted lightgray;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+/* 체크 버튼을 눌렀을 때 체크 표시가 생기도록 설정 */
+li.complete::before {
+    content: "\2713"; /* 유니코드에서 체크 마크 */
+    font-size: 1.2em; /* 체크 마크의 크기 조절 */
+    color: rgb(13, 186, 13); /* 체크 마크의 색상 */
+    position: absolute; /* 부모(li)에 대해 절대적 위치 설정 */
+    left: -25px; /* 왼쪽 여백 조절 */
+    top: 50%; /* 위쪽 여백 조절 */
+    transform: translateY(-50%); /* 수직으로 중앙 정렬 */
+}
